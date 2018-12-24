@@ -3,12 +3,69 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:barcode_scan/barcode_scan.dart';
 import 'package:flutter/services.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+//import 'package:shared_preferences/shared_preferences.dart';
 
-void main() => runApp(MaterialApp(
-  debugShowCheckedModeBanner: false,
-  home: HomePage(),
-));
+import 'package:flutter_app/AddDynamixel.dart';
+import 'package:flutter_app/DynamixelList.dart';
+
+
+
+
+
+void main() => runApp(new MyApp());
+
+class MyApp extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return new MaterialApp(
+      home: new FirstPage(),
+    );
+  }
+}
+//intro page
+class FirstPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return new Scaffold(
+            body: new Container(
+            decoration: new BoxDecoration(
+                color: Colors.black,
+                image: new DecorationImage(
+                  image: new AssetImage(
+                      'assets/images/39583861_2124508567763086_3905177148209496064_n.jpg'),
+                  fit: BoxFit.fitWidth,
+                )
+            ),
+          child: new Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: <Widget>[
+              new Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                new RaisedButton(
+                  padding: const EdgeInsets.all(40.0),
+                  textColor: Colors.white,
+                  color: Colors.black54,
+                  onPressed: () {
+                    Navigator.push(context, new MaterialPageRoute(builder: (context) => HomePage()
+                    )
+                    );
+                  },
+                  child: new Text("Get Started"),
+                ),
+  ]
+        )
+    ]
+    )
+        )
+    );
+  }
+}
+
+
+
+
+
 
 class HomePage extends StatefulWidget {
 
@@ -17,6 +74,7 @@ class HomePage extends StatefulWidget {
     return new HomePageState();
   }
 }
+
 
 class HomePageState extends State<HomePage> {
 
@@ -77,11 +135,17 @@ class HomePageState extends State<HomePage> {
                     padding: const EdgeInsets.all(40.0),
                     textColor: Colors.white,
                     color: Colors.black54,
-                    onPressed: () {},
-                    child: new Text("Add Dynamixel"),
+                    onPressed: () {
+                      Navigator.push(context, new MaterialPageRoute(
+                          builder: (context) => AddMotor()));
+                    },
+                      child: new Text("Add Dynamixel")
                   ),
                   new RaisedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context, new MaterialPageRoute(
+                          builder: (context) => MotorList()));
+                    },
                     textColor: Colors.white,
                     color: Colors.black54,
                     padding: const EdgeInsets.all(40.0),
@@ -101,4 +165,5 @@ class HomePageState extends State<HomePage> {
     );
   }
 }
+
 

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "663823776199",
+    "firebase_url": "https://dynadata-21411.firebaseio.com",
+    "project_id": "dynadata-21411",
+    "storage_bucket": "dynadata-21411.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:663823776199:android:7445727a1b688b9f",
+        "android_client_info": {
+          "package_name": "com.srmth.flutterapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "663823776199-e9glab2gggg2rititc37bagleqlm2sr4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFS3kQGh6dm7pyr38_jhir4cnuoSxKKj4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
