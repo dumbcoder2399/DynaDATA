@@ -96,14 +96,14 @@ class MotorListState extends State<MotorList> {
                   leading: Icon(Icons.add_box),
                   title: new RaisedButton(
                     onPressed: () {
-                      Preferences().getAccountKey().motorKey=motors[index].key;
+                      //Preferences().getAccountKey().motorKey=motors[index].key;
                       Navigator.push(context, new MaterialPageRoute(
                           builder: (context) => MotorDetail()));
                     },
                     textColor: Colors.white,
                     color: Colors.black54,
                     padding: const EdgeInsets.all(20.0),
-                    child: new Text(thefuckingkey = motors[index].key),
+                    child: new Text(motors[index].motor_key),
 
                   ),
                 );

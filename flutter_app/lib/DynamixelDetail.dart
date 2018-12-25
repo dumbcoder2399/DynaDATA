@@ -259,7 +259,7 @@ class Preferences {
 
     // workaround - simulate a login setting this
     if (motorKey == null) {
-      motorKey="";
+      motorKey="-LUOxF9jxQ3fvKXv3bZK";
       
   }
     return motorKey;

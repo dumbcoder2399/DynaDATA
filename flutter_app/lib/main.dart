@@ -126,7 +126,7 @@ class HomePageState extends State<HomePage> {
           child: new Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text(result,style: new TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),),
+              //Text(result,style: new TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),),
 
               new Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
